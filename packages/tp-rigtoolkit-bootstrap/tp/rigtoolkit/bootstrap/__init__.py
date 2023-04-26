@@ -99,6 +99,9 @@ def init(**kwargs):
 	logger.debug('Resolving tp-rigtoolkit environment:')
 	logger.debug(f'\tResolver: {current_env.resolver}')
 	logger.debug(f'\tEnvironment configuration file: {current_env.resolver.get_environment_path()}')
+	logger.info('\n\n' + '=' * 80)
+	logger.info('tp-rigtoolkit Framework')
+	logger.info('\n' + '=' * 80 + '\n')
 	current_env.resolver.resolve_from_path(current_env.resolver.get_environment_path())
 	_RIGTOOLKIT_PACKAGE_MANAGER = current_env
 
@@ -119,10 +122,14 @@ def shutdown():
 		logger.debug('No tp-rigtoolkit framework environment found to set shutdowon')
 		return False
 
+	logger.info('\n\n' + '=' * 80)
+	logger.info('tp-rigtoolkit Framework')
+	logger.info('\n' + '=' * 80 + '\n')
+
 	logger.debug(f'Shutting down tp-rigging framework environment: {_RIGTOOLKIT_PACKAGE_MANAGER}')
 	logger.debug(f'\tRoot Path: {_RIGTOOLKIT_PACKAGE_MANAGER.root_path}')
 	logger.debug(f'\tDev: {_RIGTOOLKIT_PACKAGE_MANAGER.is_dev()}')
 
-	_RIGTOOLKIT_PACKAGE_MANAGER.shutdown()
+	_RIGTOOLKIT_PACKAGE_MANAGER.resolver.shutdown()
 
 	bootstrap.shutdown()
