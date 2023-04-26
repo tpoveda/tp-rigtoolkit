@@ -1,0 +1,12 @@
+name: 'tp-rigtoolkit-core'
+version: '1.0.0'
+required: True
+author: 'Tomas Poveda'
+authorEmail: 'tpovedatd@gmail.com'
+description: 'Core package for tpRigToolkit framework'
+displayName: 'tpRigToolkit'
+environment:
+  PYTHONPATH:
+    - '{self}'
+commands:
+  - '{self}/tp/rigtoolkit/startup/rigtoolkitcore.py'
