@@ -1,0 +1,14 @@
+name: 'tp-rigtoolkit-maya'
+version: '1.0.0'
+required: True
+author: 'Tomas Poveda'
+authorEmail: 'tpovedatd@gmail.com'
+description: 'Maya libraries for tpRigToolkit framework.'
+displayName: 'tpRigToolkit Maya'
+environment:
+  PYTHONPATH:
+    - '{self}'
+  TP_RIGTOOLKIT_CURVES_PATHS:
+    - '{self}/tp/rigtoolkit/maya/curves'
+commands:
+  - '{self}/tp/rigtoolkit/startup/rigtoolkitmaya.py'
