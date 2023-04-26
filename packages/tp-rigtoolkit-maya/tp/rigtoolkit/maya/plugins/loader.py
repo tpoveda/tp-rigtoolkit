@@ -12,7 +12,7 @@ from tp.core import log, dcc
 from tp.common.python import osplatform, path
 from tp.maya.cmds import helpers
 
-logger = log.rigLogger
+logger = log.tpLogger
 
 
 def get_root_path():
