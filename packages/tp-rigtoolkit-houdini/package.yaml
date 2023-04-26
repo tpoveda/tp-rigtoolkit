@@ -1,0 +1,12 @@
+name: 'tp-rigtoolkit-houdini'
+version: '1.0.0'
+required: True
+author: 'Tomas Poveda'
+authorEmail: 'tpovedatd@gmail.com'
+description: 'Houdini libraries for tpRigToolkit framework.'
+displayName: 'tpRigToolkit Houdini'
+environment:
+  PYTHONPATH:
+    - '{self}'
+commands:
+  - '{self}/tp/rigtoolkit/startup/rigtoolkithoudini.py'
